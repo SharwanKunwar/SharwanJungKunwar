@@ -100,13 +100,12 @@ function MusicPlayer({ onRefReady }) {
         <div className="w-full h-[70vh] backdrop-blur-2xl rounded-lg flex border border-white/5 items-center justify-center mastShadow relative overflow-hidden">
           {musicList[currentTrack]?.video?.endsWith(".mp4") ? (
             <video
-              src={process.env.PUBLIC_URL + musicList[currentTrack]?.video}
+              src={musicList[currentTrack]?.video}
               autoPlay
               loop
               muted
               className="w-full h-full object-cover rounded-lg object-center"
             />
-
           ) : (
             <img
               src={musicList[currentTrack]?.video}
