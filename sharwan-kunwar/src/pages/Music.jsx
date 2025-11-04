@@ -97,7 +97,7 @@ function MusicPlayer({ onRefReady }) {
       {/* Left Box */}
       <div className="lg:w-full  lg:py-10 flex flex-col items-center justify-center lg:p-3 rounded-lg relative">
         {/* Album Art */}
-        <div className="w-full h-[70vh] backdrop-blur-2xl rounded-lg flex border border-white/30 items-center justify-center mastShadow relative overflow-hidden">
+        <div className="w-full h-[70vh] backdrop-blur-2xl rounded-lg flex border border-white/5 items-center justify-center mastShadow relative overflow-hidden">
           {musicList[currentTrack]?.video?.endsWith(".mp4") ? (
             <video
               src={musicList[currentTrack]?.video}
