@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+.mastShadow {
+  box-shadow: 0px 2px 3px -1px rgba(0, 0, 0, 0.1), 
+              0px 1px 0px 0px rgba(25, 28, 33, 0.02), 
+              0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+}
+
+
+
+.mastWhiteShadow {
+  box-shadow: 0px 2px 3px -1px rgba(238, 233, 233, 0.884), 
+              0px 1px 0px 0px rgba(20, 224, 224, 0.89), 
+              0px 0px 0px 1px rgba(21, 133, 245, 0.959);
+}
+
+@keyframes wave {
+  0% { transform: rotate( 0.0deg) }
+  10% { transform: rotate(14.0deg) }
+  20% { transform: rotate(-8.0deg) }
+  30% { transform: rotate(14.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(10.0deg) }
+  60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
+
+.animate-wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave 2s infinite;
+}
+
+.mastgBackgroundColor{
+
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+
+
+
+
+
+
+
+/* Hide scrollbar for all elements */
+::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar in Firefox */
+html {
+  scrollbar-width: none;
+}
+/* Hide scrollbar in Edge, IE */
+body {
+  -ms-overflow-style: none;
+}
+
+
+/* animation for teck stack  */
+@keyframes marquee-left {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes marquee-right {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 15s linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 15s linear infinite;
+}
+
+
+
+
+
