@@ -3,25 +3,25 @@ import { motion, useAnimation } from "motion/react";
 import { DarkModeContext } from '../context/DarkModeContext';
 
 const musicList = [
-  { name: "Focus : Study Track Music 1", file: "/music/music1.mp3", video:"/musicVideo/v13.mp4"},
-  { name: "Focus : Study Track Music 2", file: "/music/music2.mp3", video:"/musicVideo/v13.mp4"},
-  { name: "Focus : Study Track Music 3", file: "/music/music3.mp3", video:"/musicVideo/v13.mp4"},
-  { name: "Focus : Study Track Music 4", file: "/music/music4.mp3", video:"/musicVideo/v13.mp4"},
-  { name: "Focus : Study Track Music 5", file: "/music/music5.mp3", video:"/musicVideo/v13.mp4"},
-  { name: "Focus : Study Track Music 6", file: "/music/music6.mp3", video:"/musicVideo/v13.mp4"},
-  { name: "Focus : Study Track Music 7", file: "/music/music7.mp3", video:"/musicVideo/v13.mp4"},
-  { name: "Focus : Study Track Music 8", file: "/music/music8.mp3", video:"/musicVideo/v13.mp4"},
-  { name: "Focus : Study Track Music 9", file: "/music/music9.mp3", video:"/musicVideo/v13.mp4"},
-  { name: "Focus : Study Track Music 10", file: "/music/music10.mp3", video:"/musicVideo/v13.mp4"},
-  { name: "Focus : Study Track Music 11", file: "/music/music11.mp3", video:"/musicVideo/v13.mp4"},
-  { name: "Focus : Study Track Music 12", file: "/music/music12.mp3", video:"/musicVideo/v13.mp4"},
-  { name: "Focus : Study Track Music 13", file: "/music/music13.mp3", video:"/musicVideo/v13.mp4"},
-  { name: "Focus : Study Track Music 14", file: "/music/music14.mp3", video:"/musicVideo/v13.mp4"},
-  { name: "Focus : Study Track Music 15", file: "/music/music15.mp3", video:"/musicVideo/v13.mp4"},
-  { name: "Focus : Study Track Music 16", file: "/music/music16.mp3", video:"/musicVideo/v13.mp4"},
-  { name: "Focus : Study Track Music 17", file: "/music/music17.mp3", video:"/musicVideo/v13.mp4"},
-  { name: "Focus : Study Track Music 18", file: "/music/music18.mp3", video:"/musicVideo/v13.mp4"},
-  { name: "Focus : Study Track Music 19", file: "/music/music19.mp3", video:"/musicVideo/v13.mp4" },
+  { name: "Focus : Study Track Music 1", file: "/music/music1.mp3"},
+  { name: "Focus : Study Track Music 2", file: "/music/music2.mp3"},
+  { name: "Focus : Study Track Music 3", file: "/music/music3.mp3"},
+  { name: "Focus : Study Track Music 4", file: "/music/music4.mp3"},
+  { name: "Focus : Study Track Music 5", file: "/music/music5.mp3"},
+  { name: "Focus : Study Track Music 6", file: "/music/music6.mp3"},
+  { name: "Focus : Study Track Music 7", file: "/music/music7.mp3"},
+  { name: "Focus : Study Track Music 8", file: "/music/music8.mp3"},
+  { name: "Focus : Study Track Music 9", file: "/music/music9.mp3"},
+  { name: "Focus : Study Track Music 10", file: "/music/music10.mp3"},
+  { name: "Focus : Study Track Music 11", file: "/music/music11.mp3"},
+  { name: "Focus : Study Track Music 12", file: "/music/music12.mp3"},
+  { name: "Focus : Study Track Music 13", file: "/music/music13.mp3"},
+  { name: "Focus : Study Track Music 14", file: "/music/music14.mp3"},
+  { name: "Focus : Study Track Music 15", file: "/music/music15.mp3"},
+  { name: "Focus : Study Track Music 16", file: "/music/music16.mp3"},
+  { name: "Focus : Study Track Music 17", file: "/music/music17.mp3"},
+  { name: "Focus : Study Track Music 18", file: "/music/music18.mp3"},
+  { name: "Focus : Study Track Music 19", file: "/music/music19.mp3",},
 ];
 
 function MusicPlayer({ onRefReady }) {
@@ -98,21 +98,15 @@ function MusicPlayer({ onRefReady }) {
       <div className="lg:w-full  lg:py-10 flex flex-col items-center justify-center lg:p-3 rounded-lg relative">
         {/* Album Art */}
         <div className="w-full h-[70vh] backdrop-blur-2xl rounded-lg flex border border-white/5 items-center justify-center mastShadow relative overflow-hidden">
-          {musicList[currentTrack]?.video?.endsWith(".mp4") ? (
+          
             <video
-              src={musicList[currentTrack]?.video}
+              src="/musicVideo/v13.mp4"
               autoPlay
               loop
               muted
               className="w-full h-full object-cover rounded-lg object-center"
             />
-          ) : (
-            <img
-              src={musicList[currentTrack]?.video}
-              alt={musicList[currentTrack]?.name}
-              className="w-full h-full object-cover rounded-lg"
-            />
-          )}
+          
         </div>
 
 
