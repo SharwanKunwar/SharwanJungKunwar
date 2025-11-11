@@ -6,6 +6,16 @@ import { Button } from 'antd';
 
 const ProjectDetails = [
   {
+    id: 26,
+    title: "Super Site",
+    imgUrl: "/work/superSite.png",
+    URL: "https://super-site-rho.vercel.app/",
+    source: "https://github.com/SharwanKunwar/SuperSite",
+    description: "SuperSite collects essential websites in one place. Built with React.js, TailwindCSS, and Motion, it lets users explore and search resources by category with a clean design and smooth animations.",
+    teck: ["ReactJS", "Tailwindcss", "Motion"],
+    date: "Nov 9, 2025, 9:34 PM"
+  },
+  {
     id: 25,
     title: "Dev Tools",
     imgUrl: "/work/DevTool.png",
