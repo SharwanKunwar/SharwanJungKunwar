@@ -1,7 +1,27 @@
 import React, { useState, useContext } from "react";
 import { Container } from "../components/Container";
 import { motion } from "motion/react";
-import { SiNextdotjs, SiC, SiReact, SiSpringboot, SiOpenjdk, SiPostgresql, SiDocker, SiTailwindcss, SiJavascript, SiTypescript, SiMongodb, SiFirebase, SiHtml5, SiCss3, SiNodedotjs, SiFramer, SiGithub, SiAntdesign, } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiC,
+  SiReact,
+  SiSpringboot,
+  SiOpenjdk,
+  SiPostgresql,
+  SiDocker,
+  SiTailwindcss,
+  SiJavascript,
+  SiTypescript,
+  SiMongodb,
+  SiFirebase,
+  SiHtml5,
+  SiCss3,
+  SiNodedotjs,
+  SiFramer,
+  SiGithub,
+  SiAntdesign,
+} from "react-icons/si";
+import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
 import ProjectCard from "../components/ProjectCard";
 import { Button } from "antd";
 import Resume from "../pages/Resume";
@@ -176,9 +196,96 @@ function Home() {
           >
             <p className="text-neutral-400 pt-3 md:text-sm text-sm max-w-full">
               I’m from the far-west side of Nepal — a place where tech dreams go
-              to fight for oxygen...
+              to fight for oxygen. No IT background, no family guidance, and
+              honestly, no friends who could explain what “Hello World” means. I
+              learned everything myself, mostly from YouTube, trial-and-error,
+              and a generous sprinkle of frustration. I explore, I build, I
+              break, and then I learn from the carnage.
             </p>
-            {/* ... more paragraphs ... */}
+
+            <p className="text-neutral-400 pt-3 md:text-sm text-sm max-w-full">
+              My journey started with <strong>C</strong>, then basic
+              fundamentals, and by the end of grade 12, I went to India to work
+              at a company called Signa — they make devices for people who can’t
+              hear. I worked as a packer, surrounded by boxes and accessories.
+              But naturally, I couldn’t leave the programmer in me behind.
+            </p>
+
+            <p className="text-neutral-400 pt-3 md:text-sm text-sm max-w-full">
+              Faced with a product-packing nightmare — accessories everywhere,
+              no guide, and zero instructions — I coded my salvation in{" "}
+              <strong>C</strong>. That solution? A whopping 11,000 lines of code
+              running on a phone compiler, without a laptop. When life gives you
+              chaos, build a compiler app, right?
+            </p>
+
+            <p className="text-neutral-400 pt-3 md:text-sm text-sm max-w-full">
+              After that, I returned to Nepal, dove headfirst into studying and
+              programming, learned Android development, built projects in
+              Android Studio, explored web development, mastered React, and now
+              I’m venturing into backend with Spring Boot and PostgreSQL.
+              Supabase keeps me sane for quick projects. Currently, I’m in my
+              third semester of BCA, fully obsessed with full-stack web
+              applications.
+            </p>
+
+            <p className="text-neutral-400 pt-3 md:text-sm text-sm max-w-full">
+              TL;DR: From packing boxes in India to writing tens of thousands of
+              lines of code, self-taught and caffeine-powered, I’m here to build
+              systems that work, break, and then work better.
+            </p>
+
+            <section className="mt-10 w-full text-neutral-400 md:text-sm text-sm max-w-2xl">
+              <p>
+                If Googling me is your thing—go ahead. You can find me across
+                the web here:
+              </p>
+
+              <div className="grid md:grid-cols-9 grid-cols-5 gap-1 md:mt-3 mt-5">
+                <section className="flex justify-start items-center">
+                  <Button>
+                    <a
+                      href="https://www.facebook.com/sravana.kumvara/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Facebook"
+                    >
+                      <FaFacebook className="text-blue-400 w-6 h-6 hover:text-blue-200 transition-colors duration-200" />
+                    </a>
+                  </Button>
+                </section>
+
+                <section className="flex justify-start items-center">
+                  <Button>
+                    <a
+                      href="https://www.linkedin.com/in/sharwan-kunwar-95a919317/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn"
+                    >
+                      <FaLinkedin className="text-blue-400 w-6 h-6 hover:text-blue-200 transition-colors duration-200" />
+                    </a>
+                  </Button>
+                </section>
+
+                <section className="flex justify-start items-center">
+                  <Button>
+                    <a
+                      href="https://github.com/SharwanKunwar"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                    >
+                      <FaGithub
+                        className={`text-black w-6 h-6 hover:text-gray-300 transition-colors duration-200 ${
+                          isDarkMode && "text-black"
+                        }`}
+                      />
+                    </a>
+                  </Button>
+                </section>
+              </div>
+            </section>
           </motion.section>
         )}
 
