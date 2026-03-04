@@ -175,6 +175,72 @@ function Navbar() {
         </div>
       </motion.nav>
 
+
+
+      {/* // modile nav  */}
+      {/* Mobile Menu Links */}
+      {/* Mobile Fullscreen Nav */}
+      {open && (
+        <>
+          <div
+            className="fixed z-49 w-screen h-screen backdrop-blur-2xl left-0 top-0 flex justify-center items-center dark:bg-neutral-800/30"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: -120 }}
+              // transition={{duration:0.3}}
+              className="w-[90%] rounded-md mt-10"
+            >
+              {/* Header */}
+              <div className="flex justify-between w-full items-center">
+                <h1 className="text-2xl py-4 px-8 border-b border-white/30">Menu</h1>
+
+                {/* Dark mode toggle for phone */}
+                <button
+                  onClick={toggleDarkMode}
+                  className={`text-black flex justify-center items-center rounded-full w-10 h-10 mastShadow mr-5 ${
+                    isDarkMode ? "text-white mastWhiteShadow" : ""
+                  }`}
+                >
+                  {isDarkMode ? <FaSun color="gold" size={30} /> : <FaMoon color="white" size={30} />}
+                </button>
+              </div>
+
+              {/* Navigation Links */}
+              <div className="h-full flex justify-center items-start pt-20">
+                <nav className="text-lg text-white">
+                  <ul className="flex flex-col gap-5">
+                    <Link to="home">
+                      <li className="backdrop-blur-2xl text-center px-30 py-2 rounded-sm border border-white/50 shadow-sm">
+                        Home
+                      </li>
+                    </Link>
+                    <Link to="projects">
+                      <li className="backdrop-blur-2xl text-center px-30 py-2 rounded-sm border border-white/50 shadow-sm">
+                        Projects
+                      </li>
+                    </Link>
+                    <Link to="blog">
+                      <li className="backdrop-blur-2xl text-center px-30 py-2 rounded-sm border border-white/50 shadow-sm">
+                        Blog
+                      </li>
+                    </Link>
+                  </ul>
+                </nav>
+              </div>
+            </motion.div>
+          </div>
+        </>
+      )}
+
+
+
+
+
+
+
+
+
       {/* Secret Modal */}
       <Modal
         open={openFriend}

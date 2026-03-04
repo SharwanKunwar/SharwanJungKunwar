@@ -214,9 +214,9 @@ function Home() {
         </div>
 
         {/* Skills Marquee -------------------------------------------------------*/}
-        <div className="relative w-full md:mt-20 mt-10 overflow-hidden">
+        <div className="relative w-full md:mt-15 mt-7 overflow-hidden ">
           {/* Top Row – Left to Right */}
-          <div className="w-full h-[80px] overflow-hidden relative">
+          <div className="w-full h-20 overflow-hidden relative">
             <div className="flex gap-6 animate-marquee-left hover:animation-play-state-paused">
               {[...Array(2)].map((_, idx) =>
                 [

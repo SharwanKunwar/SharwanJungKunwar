@@ -6,7 +6,7 @@ function Resume() {
   const{isDarkMode} = useContext(DarkModeContext)
   return (
     <>
-        <div id="education" className={`flex justify-center p-2 border-t border-b border-black/30 text-3xl mt-20 ${isDarkMode?"border-white/30":""}`}>Resume</div>
+        <div id="education" className={`flex justify-center p-2 border-t border-b border-black/30 text-3xl mt-15 ${isDarkMode?"border-white/30":""}`}>Resume</div>
           <p className="pt-4 md:block hidden text-center text-neutral-500">Explore my journey through development projects and academic growth. This section highlights my work experience and education timeline, showcasing skills in both frontend and backend technologies including Java, Spring Boot, Android, and web development.</p>
           <p className="pt-4 md:hidden block text-center text-neutral-500">My journey in dev and education, with skills in Java, Spring Boot, Android & web.</p>
           
