@@ -19,19 +19,21 @@ function Navbar() {
   const navigate = useNavigate();
 
   /* =========================
-     🔥 Natural Haptic Helper
+     🔥 Natural Haptic Engine
+     (No UI Changes)
   ========================== */
   const vibrate = (pattern) => {
-    if (navigator.vibrate) {
-      navigator.vibrate(pattern);
-    }
+    if (!navigator.vibrate) return;
+    navigator.vibrate(pattern);
   };
 
   const haptic = {
-    tap: () => vibrate(25),                 // very light tap
-    soft: () => vibrate(40),                // normal tap
-    success: () => vibrate([40, 30, 90]),   // natural success feel
-    error: () => vibrate([100, 50, 120]),   // natural error feel
+    tap: () => vibrate(15),                  // micro tap
+    soft: () => vibrate(30),                 // light tap
+    openMenu: () => vibrate(35),
+    closeMenu: () => vibrate(20),
+    success: () => vibrate([30, 20, 80]),
+    error: () => vibrate([80, 40, 120]),
   };
 
   const navItems = [
@@ -114,7 +116,7 @@ function Navbar() {
             {open ? (
               <X
                 onClick={() => {
-                  haptic.soft();
+                  haptic.closeMenu();
                   setOpen(false);
                 }}
                 className="w-9 h-9 cursor-pointer mr-2"
@@ -122,7 +124,7 @@ function Navbar() {
             ) : (
               <Menu
                 onClick={() => {
-                  haptic.soft();
+                  haptic.openMenu();
                   setOpen(true);
                 }}
                 className="w-9 h-9 cursor-pointer mr-2"
@@ -174,7 +176,14 @@ function Navbar() {
       </motion.nav>
 
       {/* Secret Modal */}
-      <Modal open={openFriend} onCancel={() => setOpenFriend(false)} footer={null}>
+      <Modal
+        open={openFriend}
+        onCancel={() => {
+          haptic.tap();
+          setOpenFriend(false);
+        }}
+        footer={null}
+      >
         <h1 className='text-lg font-medium mb-2'>Private Zone</h1>
         <Input
           value={broCode}
