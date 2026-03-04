@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Container } from "../components/Container";
 import { motion } from "motion/react";
-import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
+import { SiNextdotjs, SiC, SiReact, SiSpringboot, SiOpenjdk, SiPostgresql, SiDocker, SiTailwindcss, SiJavascript, SiTypescript, SiMongodb, SiFirebase, SiHtml5, SiCss3, SiNodedotjs, SiFramer, SiGithub, SiAntdesign, } from "react-icons/si";
 import ProjectCard from "../components/ProjectCard";
 import { Button } from "antd";
 import Resume from "../pages/Resume";
@@ -213,9 +213,99 @@ function Home() {
           </div>
         </div>
 
-        {/* Skills Marquee */}
+        {/* Skills Marquee -------------------------------------------------------*/}
         <div className="relative w-full md:mt-20 mt-10 overflow-hidden">
-          {/* ... Skills Marquee Code Remains EXACTLY SAME ... */}
+          {/* Top Row – Left to Right */}
+          <div className="w-full h-[80px] overflow-hidden relative">
+            <div className="flex gap-6 animate-marquee-left hover:animation-play-state-paused">
+              {[...Array(2)].map((_, idx) =>
+                [
+                  { icon: SiReact, name: "React", color: "text-blue-400" },
+                  {
+                    icon: SiSpringboot,
+                    name: "Spring Boot",
+                    color: "text-green-600",
+                  },
+                  { icon: SiOpenjdk, name: "Java", color: "text-red-600" },
+                  {
+                    icon: SiPostgresql,
+                    name: "PostgreSQL",
+                    color: "text-blue-700",
+                  },
+                  { icon: SiDocker, name: "Docker", color: "text-blue-500" },
+                  {
+                    icon: SiTailwindcss,
+                    name: "Tailwind",
+                    color: "text-teal-400",
+                  },
+                  {
+                    icon: SiGithub,
+                    name: "GitHub",
+                    color: isDarkMode ? "text-white" : "text-black",
+                  },
+                ].map(({ icon: Icon, name, color }, i) => (
+                  <div
+                    key={`${idx}-${i}`}
+                    className="flex flex-col items-center justify-center w-20 h-20 bg-white/10 dark:bg-white/5 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-md shadow-md p-2"
+                  >
+                    <Icon className={`text-4xl mb-1 ${color}`} />
+                    <span
+                      className={`text-xs mt-1 text-center text-black ${isDarkMode && "text-white"}`}
+                    >
+                      {name}
+                    </span>
+                  </div>
+                )),
+              )}
+            </div>
+          </div>
+
+          {/* Bottom Row – Right to Left */}
+          <div className="mt-5 w-full h-[80px] overflow-hidden relative">
+            <div className="flex gap-6 animate-marquee-right hover:animation-play-state-paused">
+              {[...Array(2)].map((_, idx) =>
+                [
+                  {
+                    icon: SiJavascript,
+                    name: "JavaScript",
+                    color: "text-yellow-400",
+                  },
+                  { icon: SiC, name: "C", color: "text-blue-400" },
+                  {
+                    icon: SiNextdotjs,
+                    name: "Next.js",
+                    color: isDarkMode ? "text-white" : "text-black",
+                  },
+                  { icon: SiMongodb, name: "MongoDB", color: "text-green-600" },
+                  {
+                    icon: SiFirebase,
+                    name: "Firebase",
+                    color: "text-yellow-500",
+                  },
+                  { icon: SiHtml5, name: "HTML5", color: "text-orange-600" },
+                  { icon: SiCss3, name: "CSS3", color: "text-blue-500" },
+                  { icon: SiFramer, name: "Framer", color: "text-purple-500" },
+                  {
+                    icon: SiAntdesign,
+                    name: "Ant Design",
+                    color: "text-blue-600",
+                  },
+                ].map(({ icon: Icon, name, color }, i) => (
+                  <div
+                    key={`${idx}-${i}`}
+                    className="flex flex-col items-center justify-center w-20 h-20 bg-white/10 dark:bg-white/5 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-md shadow-md p-2"
+                  >
+                    <Icon className={`text-3xl mb-1 ${color}`} />
+                    <span
+                      className={`text-xs mt-1 text-center text-black ${isDarkMode && "text-white"}`}
+                    >
+                      {name}
+                    </span>
+                  </div>
+                )),
+              )}
+            </div>
+          </div>
         </div>
 
         {/* Resume Section */}

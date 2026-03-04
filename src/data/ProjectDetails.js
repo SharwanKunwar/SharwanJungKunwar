@@ -3,10 +3,10 @@ export const ProjectDetails = [
     id: 28,
     title: "Sharwan Jung Kunwar",
     imgUrl: "portfolio.png",
-    URL: "https://laboratory-2026.vercel.app/",
-    source: "https://github.com/SharwanKunwar/Laboratory-2026/tree/main/Personal%20Projects/Focus%20Planner/FocusPlanner",
+    URL: "https://sharwanjungkunwar.vercel.app/",
+    source: "https://github.com/SharwanKunwar/SharwanJungKunwar",
     description:
-      "A modern focus planner that helps users organize tasks, set daily goals, track progress, and boost productivity with a clean, distraction-free interface.",
+      "Welcome to my portfolio. I turn ideas into projects, learn from mistakes, embrace challenges, and craft solutions that keep evolving.",
     teck: ["ReactJS", "Tailwindcss", "Motion", "antd"],
     date: "March 3, 2026, 9:47 PM",
   },

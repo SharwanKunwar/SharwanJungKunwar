@@ -44,10 +44,10 @@ function ProjectCard(props) {
                     </div>
                     <div className='w-full flex justify-center items-center gap-3 lg:mt-7 mt-5'>
                         <a target='_blank' href={props.SUrl} className='w-6/12'>
-                            <button className='w-full border border-white/30 text-white font-medium py-1 rounded-full hover:bg-indigo-600 bg-indigo-400'>Source Code</button>
+                            <Button size='large' className='w-full border border-white/30 text-white font-medium py-1 rounded-full hover:bg-indigo-600 bg-indigo-400'>Source Code</Button>
                         </a>
                         <a target='_blank' href={props.PUrl} className='w-6/12'>
-                            <button className='w-full border text-white font-medium border-white/30 py-1 rounded-full hover:bg-indigo-600 bg-indigo-400'>Live Preview</button>
+                            <Button size='large' className='w-full border text-white font-medium border-white/30 py-1 rounded-full hover:bg-indigo-600 bg-indigo-400'>Live Preview</Button>
                         </a>
                     </div>
                 </motion.div>
