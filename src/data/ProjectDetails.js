@@ -1,5 +1,16 @@
 export const ProjectDetails = [
   {
+    id: 29,
+    title: "Fack-Data-Builder",
+    imgUrl: "202601.png",
+    URL: "https://fake-data-builder.vercel.app/",
+    source: "https://github.com/SharwanKunwar/Fake-Data-Builder",
+    description:
+      "A tool that generates realistic fake data for testing and development. Built to simplify workflows, experiment with datasets, and make development faster and easier.",
+    teck: ["ReactJS", "Tailwindcss", "Motion", "antd"],
+    date: "Dec 5, 2025, 2:06 PM",
+  },
+  {
     id: 28,
     title: "Sharwan Jung Kunwar",
     imgUrl: "portfolio.png",

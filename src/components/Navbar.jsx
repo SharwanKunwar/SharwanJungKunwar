@@ -167,7 +167,7 @@ function Navbar() {
               haptic.tap();
               toggleDarkMode();
             }}
-            className="rounded-full w-10 h-10 mastShadow hidden md:flex justify-center items-center"
+            className={`rounded-full w-10 h-10 mastBlueShadow hidden md:flex justify-center items-center ${isDarkMode && "mastOrangeShadow"}`}
           >
             {isDarkMode ? <FaSun color='gold' size={20} /> : <FaMoon color='black' size={20} />}
           </button>
