@@ -1,8 +1,19 @@
 export const ProjectDetails = [
   {
+    id: 30,
+    title: "Song-Composer",
+    imgUrl: "/2026Projects/202603.png",
+    URL: "https://song-composer-mu.vercel.app/",
+    source: "https://github.com/SharwanKunwar/SongComposer",
+    description:
+      "Create original songs with ease! This app lets you generate titles, hooks, and full lyrics instantly, helping writers and creators spark new musical ideas.",
+    teck: ["ReactJS", "Tailwindcss", "Motion", "antd"],
+    date: "Dec 7, 2025, 1:42 PM",
+  },
+  {
     id: 29,
     title: "Fack-Data-Builder",
-    imgUrl: "202601.png",
+    imgUrl: "/2026Projects/202601.png",
     URL: "https://fake-data-builder.vercel.app/",
     source: "https://github.com/SharwanKunwar/Fake-Data-Builder",
     description:

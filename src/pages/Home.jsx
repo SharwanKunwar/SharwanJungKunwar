@@ -34,7 +34,7 @@ const ProjectDetails = [
   {
     id: 1,
     title: "Planner",
-    imgUrl: "MainProjectImage/m1.png",
+    imgUrl: "/2026Projects/202602.png",
     URL: "https://laboratory-2026.vercel.app/",
     source:
       "https://github.com/SharwanKunwar/Laboratory-2026/tree/main/Personal%20Projects/Focus%20Planner/FocusPlanner",
@@ -45,14 +45,14 @@ const ProjectDetails = [
   },
   {
     id: 2,
-    title: "Youtube-Thumbnail-Downloader",
-    imgUrl: "/work/youtube.png",
-    URL: "https://download-youtube-thumbnail.vercel.app/",
-    source: "https://github.com/SharwanKunwar/Download-Youtube-Thumbnail",
+    title: "Fack-Data-Builder",
+    imgUrl: "/2026Projects/202601.png",
+    URL: "https://fake-data-builder.vercel.app/",
+    source: "https://github.com/SharwanKunwar/Fake-Data-Builder",
     description:
-      "A lightweight JavaScript tool to instantly fetch and download a YouTube video’s thumbnail—fast, simple, and browser-ready.",
-    teck: ["ReactJS", "TailwindCSS", "Toastify"],
-    date: "Oct 9, 2025, 4:24 PM",
+      "A tool that generates realistic fake data for testing and development. Built to simplify workflows, experiment with datasets, and make development faster and easier.",
+    teck: ["ReactJS", "Tailwindcss", "Motion", "antd"],
+    date: "Dec 5, 2025, 2:06 PM",
   },
   {
     id: 3,
