@@ -19,8 +19,8 @@ function ProjectCard(props) {
         className='relative inline-block '
         >
             
-            <Card hoverable className={`bg-gray-100! h-[310px]! ${isDarkMode?"bg-gray-700!":""}`}>
-                <img src={props.img} alt="ProjectImg" className='rounded-md bg-linear-to-br from-indigo-400 to-green-400 via-pink-400 mastShadow  min-h-[200px] object-cover'/>
+            <Card hoverable className={`bg-gray-100! md:h-[310px]! ${isDarkMode?"bg-gray-700!":""}`}>
+                <img src={props.img} alt="ProjectImg" className='rounded-md bg-linear-to-br from-indigo-400 to-green-400 via-pink-400 mastShadow  min-h-[200px] object-cover overflow-hidden'/>
                 <div className='flex justify-between'>
                     <h1 className={`mt-2 font-medium text-neutral-400 ${isDarkMode?"text-white":""}`}>{props.title}</h1>
                     <h1 className={`mt-2 font-medium text-neutral-400 ${isDarkMode?"text-white":""}`}>{props.dt}</h1>
