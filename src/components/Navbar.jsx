@@ -38,7 +38,7 @@ function Navbar() {
 
   const navItems = [
     { title: 'Home', url: '/home' },
-    { title: 'Dashboard', url: '/dd' },
+    { title: 'MySelf', url: '/mySelf' },
     { title: 'Projects', url: '/projects' },
     { title: 'Blog', url: '/blog' },
   ];
@@ -213,6 +213,11 @@ function Navbar() {
                     <Link to="home">
                       <li className="backdrop-blur-2xl text-center px-30 py-2 rounded-sm border border-white/50 shadow-sm">
                         Home
+                      </li>
+                    </Link>
+                    <Link to="mySelf">
+                      <li className="backdrop-blur-2xl text-center px-30 py-2 rounded-sm border border-white/50 shadow-sm">
+                        MySelf
                       </li>
                     </Link>
                     <Link to="projects">

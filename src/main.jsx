@@ -7,8 +7,8 @@ import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import Projects from './pages/Projects.jsx'
-import DeveloperDashboard from './pages/DeveloperDashboard.jsx'
 import NotFound from './pages/NotFound.jsx'
+import MySelf from './pages/MySelf.jsx'
 
 const router = createBrowserRouter([
   {
@@ -28,8 +28,8 @@ const router = createBrowserRouter([
         element:<Projects/>
       },
       {
-        path:"/dd",
-        element: <DeveloperDashboard/>
+        path:"/mySelf",
+        element: <MySelf/>
       },
       { path: "*", element: <NotFound /> }, // <-- Catch-all 404
     ]
