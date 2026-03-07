@@ -1,7 +1,6 @@
-<h1>lovekafkdfkd</h1>
-# Meet Sharwan Kunwar
+# Sharwan Kunwar
 
-Sharwan Kunwar is a passionate **full-stack developer**, constantly exploring new technologies and building practical projects. He combines creativity with technical skills to craft engaging web and mobile applications.
+![Portfolio Image](blogs/img/portfolio.png)
 
 ---
 
@@ -30,14 +29,3 @@ Sharwan began his journey by learning **Java and C programming** and gradually m
 Sharwan loves **hands-on learning** and believes in continuously improving skills through practice, projects, and collaboration.
 
 ---
-
-## Example Code Snippet
-
-Here’s a small Java snippet Sharwan likes to share:
-
-```java
-public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello from Sharwan Kunwar!");
-    }
-}

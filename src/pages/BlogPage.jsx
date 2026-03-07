@@ -37,15 +37,12 @@ function BlogPage() {
     fetchBlogs();
   }, []);
 
-  // Toggle expanded state
   const toggleExpand = (index) => {
     setExpanded((prev) => ({ ...prev, [index]: !prev[index] }));
   };
 
-  // Safe Markdown preview without breaking formatting
   const getMarkdownPreview = (content, limit = 350) => {
     if (content.length <= limit) return content;
-
     const lines = content.split("\n");
     let preview = "";
     for (let line of lines) {
@@ -58,12 +55,8 @@ function BlogPage() {
 
   return (
     <div className="max-w-4xl mx-auto p-4 pt-20">
-      {/* Header */}
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-bold">My Blogs</h1>
-      </div>
+      <h1 className="text-3xl font-bold mb-6">My Blogs (README Style)</h1>
 
-      {/* Blog List */}
       {blogs.length === 0 && (
         <p className="text-gray-500 text-center">No blogs found yet.</p>
       )}
@@ -75,12 +68,12 @@ function BlogPage() {
         return (
           <div
             key={index}
-            className="border p-5 rounded-lg mb-6 shadow hover:shadow-lg transition duration-200"
+            className="border rounded-lg mb-6 shadow hover:shadow-lg transition duration-200 p-6 bg-white"
           >
-            <h2 className="text-xl font-semibold mb-3">{blog.name}</h2>
+            <h2 className="text-2xl font-bold mb-4">{blog.name}</h2>
 
-            {/* Markdown Container with Tailwind Typography */}
-            <div className="prose max-w-none">
+            {/* Markdown Container */}
+            <div className="prose prose-sm sm:prose lg:prose-lg max-w-none">
               <ReactMarkdown>
                 {isExpanded ? blog.content : preview}
               </ReactMarkdown>
