@@ -26,6 +26,7 @@ function BlogPage() {
           })
         );
 
+        // Sort blogs by newest first
         blogData.sort((a, b) => (a.name < b.name ? 1 : -1));
         setBlogs(blogData);
       } catch (error) {
@@ -41,18 +42,17 @@ function BlogPage() {
     setExpanded((prev) => ({ ...prev, [index]: !prev[index] }));
   };
 
-  // Function to safely create a Markdown preview
+  // Safe Markdown preview without breaking formatting
   const getMarkdownPreview = (content, limit = 350) => {
     if (content.length <= limit) return content;
 
-    // Split by lines to avoid breaking code blocks
     const lines = content.split("\n");
     let preview = "";
     for (let line of lines) {
       if (preview.length + line.length > limit) break;
       preview += line + "\n";
     }
-    preview += "..."; // Add ellipsis
+    preview += "...";
     return preview;
   };
 
@@ -78,7 +78,14 @@ function BlogPage() {
             className="border p-5 rounded-lg mb-6 shadow hover:shadow-lg transition duration-200"
           >
             <h2 className="text-xl font-semibold mb-3">{blog.name}</h2>
-            <ReactMarkdown>{isExpanded ? blog.content : preview}</ReactMarkdown>
+
+            {/* Markdown Container with Tailwind Typography */}
+            <div className="prose max-w-none">
+              <ReactMarkdown>
+                {isExpanded ? blog.content : preview}
+              </ReactMarkdown>
+            </div>
+
             {blog.content.length > 350 && (
               <Button
                 type="link"
