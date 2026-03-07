@@ -7,9 +7,6 @@ const { TextArea } = Input;
 
 function BlogPage() {
   const [blogs, setBlogs] = useState([]);
-  const [open, setOpen] = useState(false);       // For future Post modal
-  const [markdown, setMarkdown] = useState("");  // For future Post modal
-
 
     const githubAPI =
     "https://api.github.com/repos/SharwanKunwar/SharwanJungKunwar/contents/blogs";
@@ -49,10 +46,7 @@ function BlogPage() {
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold">My Blogs</h1>
-        {/* Optional: Post Blog Button for future */}
-        <Button type="primary" onClick={() => setOpen(true)}>
-          Post Blog
-        </Button>
+        
       </div>
 
       {/* Blog List */}
@@ -62,27 +56,6 @@ function BlogPage() {
           <ReactMarkdown>{blog.content}</ReactMarkdown>
         </div>
       ))}
-
-      {/* Modal for Posting Blog (Optional for now) */}
-      <Modal
-        title="Post Blog (Markdown)"
-        open={open}
-        onOk={() => {
-          // Optional: implement save to GitHub API later
-          setOpen(false);
-          setMarkdown("");
-        }}
-        onCancel={() => setOpen(false)}
-        width={700}
-      >
-        <TextArea
-          rows={12}
-          placeholder="Paste README markdown here..."
-          value={markdown}
-          onChange={(e) => setMarkdown(e.target.value)}
-        />
-      </Modal>
-
     </div>
   );
 }
