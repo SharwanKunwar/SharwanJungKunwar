@@ -54,7 +54,7 @@ function BlogPage() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-4 pt-20">
+    <div className="max-w-5xl mx-auto p-4 pt-20">
       <h1 className="text-3xl font-bold mb-6">My Blogs (README Style)</h1>
 
       {blogs.length === 0 && (

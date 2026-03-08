@@ -4,6 +4,7 @@ import ProjectCard from '../components/ProjectCard';
 import { DarkModeContext } from '../context/DarkModeContext';
 import { Button } from 'antd';
 import {ProjectDetails} from '../data/ProjectDetails'
+import BigProjectCard from '../components/BigProjectCard';
 
 function Projects() {
   const { isDarkMode } = useContext(DarkModeContext);
@@ -22,9 +23,9 @@ function Projects() {
         <h1 className={`text-2xl font-medium text-start lg:w-[95%] lg:mt-3 w-[90%] ${isDarkMode && "text-white"}`}>All Projects</h1>
 
         <div className=" w-[95%]">
-          <div className="grid lg:grid-cols-2 lg:grid-rows-2 gap-5 py-3">
+          <div className="grid lg:grid-cols-1 lg:grid-rows-1 gap-10 py-3">
             {ProjectDetails.slice(0, visibleCount).map((item) => (
-              <ProjectCard
+              <BigProjectCard
                 key={item.id}
                 title={item.title}
                 img={item.imgUrl}
