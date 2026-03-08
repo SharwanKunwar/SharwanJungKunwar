@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+
+import React, { useContext, useState, useEffect } from 'react';
 import { Button } from "antd";
 import ReactMarkdown from "react-markdown";
 import axios from "axios";
@@ -7,6 +8,13 @@ function BlogPage() {
   const [blogs, setBlogs] = useState([]);
   const [expanded, setExpanded] = useState({}); // Track expanded blogs
 
+
+  // Scroll to top when page loads
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
+    
   const githubAPI =
     "https://api.github.com/repos/SharwanKunwar/SharwanJungKunwar/contents/blogs";
 

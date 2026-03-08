@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState ,useContext} from "react";
 
 export default function MySelf({ username }) {
   const [profile, setProfile] = useState(null);
@@ -7,6 +7,12 @@ export default function MySelf({ username }) {
     stars: 0,
     forks: 0,
   });
+
+
+  // Scroll to top when page loads
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   useEffect(() => {
     async function fetchGithubData() {

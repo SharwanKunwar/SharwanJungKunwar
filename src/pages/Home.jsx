@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState,useEffect, useContext } from "react";
 import { Container } from "../components/Container";
 import { motion } from "motion/react";
 import {
@@ -82,9 +82,14 @@ function Home() {
   const [more, setMore] = useState(false);
   const { isDarkMode } = useContext(DarkModeContext);
 
-  /* =========================
-     🔥 HAPTIC FEEDBACK ENGINE
-  ========================== */
+
+  // Scroll to top when page loads
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+  
+    //  🔥 HAPTIC FEEDBACK ENGINE
+  
   const vibrate = (pattern) => {
     if (navigator.vibrate) navigator.vibrate(pattern);
   };

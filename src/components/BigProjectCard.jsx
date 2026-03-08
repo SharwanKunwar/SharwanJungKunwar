@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Badge, Button, Card } from "antd";
 import { motion } from "motion/react";
 import { useState, useContext } from "react";
@@ -82,13 +82,10 @@ function BigProjectCard(props) {
 
             <div className=" hidden  w-full h-full md:flex justify-center items-center ">
               <motion.div 
-              initial={{opacity:0,y:200}}
-              whileInView={{opacity:1,y:0,scale:1}}
-            //   transition={{duration:3.3,delay:0.3}}
-              className="bg-green-400/30 backdrop-blur-sm w-[500px] rounded-2xl md:flex md:gap-5 border border-white/30 shadow-sm p-5">
-                <div className="bg-indigo-400/30 backdrop-blur-2xl rounded-full w-[30px] shadow-sm">
-                    
-                </div>
+              initial={{opacity:0,x:-300}}
+              whileInView={{opacity:1,x:0,scale:1}}
+              transition={{duration:1.3,delay:0.5}}
+              className="bg-green-400/30 backdrop-blur-sm w-[500px] rounded-2xl md:flex md:gap-5 border border-white/30 shadow-sm p-7">
                 
                 <div className="">
                       <h1 className="text-4xl text-shadow-sm font-medium mb-3">
