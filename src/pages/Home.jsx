@@ -163,7 +163,7 @@ function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.3 }}
               onClick={haptic.tap}
-              className={`border border-black/30 px-2 py-1 text-[13px] hover:bg-indigo-500 rounded mastShadow hover:border-indigo-500 ${isDarkMode ? "mastWhiteShadow" : ""}`}
+              className={`border border-black/30 px-2 py-1 text-[13px] hover:text-white hover:bg-indigo-500 rounded mastShadow hover:border-indigo-500 ${isDarkMode ? "mastWhiteShadow" : ""}`}
             >
               🌟 Give Star
             </motion.button>
@@ -176,7 +176,7 @@ function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.3 }}
               onClick={haptic.tap}
-              className={`border border-black/30 px-2 py-1 text-[13px] hover:bg-indigo-500 rounded mastShadow hover:border-indigo-500 ${isDarkMode ? "mastWhiteShadow" : ""}`}
+              className={`border border-black/30 px-2 py-1 text-[13px] hover:text-white hover:bg-indigo-500 rounded mastShadow hover:border-indigo-500 ${isDarkMode ? "mastWhiteShadow" : ""}`}
             >
               🐱 Follow Me
             </motion.button>
