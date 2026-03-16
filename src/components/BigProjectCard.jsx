@@ -39,9 +39,9 @@ function BigProjectCard(props) {
             </h1>
           </div>
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 1 }}
             animate={{ opacity: showOverlay ? 1 : 0 }}
-            whileHover={{ opacity: 1 }}
+            whileTap={{opacity:1}}
             onClick={() => setShowOverlay((prev) => !prev)}
             transition={{ duration: 0.3 }}
             className="bg-black/30 backdrop-blur-2xl absolute top-0 left-0 w-full h-full rounded-lg flex flex-col justify-center items-start text-white p-5"

@@ -6,7 +6,7 @@ export const ProjectDetails = [
     URL: "https://ollama-locally.vercel.app/",
     source: "https://github.com/SharwanKunwar/ollamaLocally",
     description:
-      "Lucifer Local AI is a privacy-focused AI assistant that runs completely on your local machine using Ollama and the LLaMA2 model. It allows users to chat with an AI directly from a clean React-based web interface without relying on external APIs or cloud services. The project demonstrates how to integrate local LLMs with a modern frontend, providing fast responses, full control over data, and an easy way to experiment with offline AI applications.",
+     "Lucifer Local AI is a privacy-focused assistant running locally with Ollama and LLaMA2, offering a React web interface for fast AI chat and full data control.",
     teck: ["ReactJS", "Tailwindcss", "llama2:latest", "Ollama"],
     date: "Mar 10, 2026, 11:02 AM",
   },
