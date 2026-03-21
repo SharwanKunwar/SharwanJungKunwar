@@ -33,15 +33,15 @@ import MusicPlayer from "../components/MusicPlayer";
 const ProjectDetails = [
   {
     id: 1,
-    title: "Planner",
-    imgUrl: "/2026Projects/202602.png",
-    URL: "https://laboratory-2026.vercel.app/",
+    title: "Focus Planner",
+    imgUrl: "/2026Projects/focusPlanner.png",
+    URL: "https://focus-planner-mu.vercel.app/",
     source:
-      "https://github.com/SharwanKunwar/Laboratory-2026/tree/main/Personal%20Projects/Focus%20Planner/FocusPlanner",
+      "https://github.com/SharwanKunwar/FocusPlanner",
     description:
       "A modern focus planner that helps users organize tasks, set daily goals, track progress, and boost productivity with a clean, distraction-free interface.",
     teck: ["ReactJS", "Tailwindcss", "Motion", "antd"],
-    date: "March 1, 2026, 2:23 PM",
+    date: "March 21, 2026, 11:00 PM",
   },
   {
     id: 2,
