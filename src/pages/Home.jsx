@@ -178,7 +178,7 @@ function Home() {
               onClick={haptic.tap}
               className={`border border-black/30 px-2 py-1 text-[13px] hover:text-white hover:bg-indigo-500 rounded mastShadow hover:border-indigo-500 ${isDarkMode ? "mastWhiteShadow" : ""}`}
             >
-              🐱 Follow Me
+              <section className="flex items-center justify-center gap-2"><SiGithub/> Follow Me</section>
             </motion.button>
           </a>
         </section>
@@ -199,45 +199,12 @@ function Home() {
             transition={{ duration: 0.3 }}
             className="mt-3"
           >
-            <p className="text-neutral-400 pt-3 md:text-sm text-sm max-w-full">
-              I’m from the far-west side of Nepal — a place where tech dreams go
-              to fight for oxygen. No IT background, no family guidance, and
-              honestly, no friends who could explain what “Hello World” means. I
-              learned everything myself, mostly from YouTube, trial-and-error,
-              and a generous sprinkle of frustration. I explore, I build, I
-              break, and then I learn from the carnage.
-            </p>
-
-            <p className="text-neutral-400 pt-3 md:text-sm text-sm max-w-full">
-              My journey started with <strong>C</strong>, then basic
-              fundamentals, and by the end of grade 12, I went to India to work
-              at a company called Signa — they make devices for people who can’t
-              hear. I worked as a packer, surrounded by boxes and accessories.
-              But naturally, I couldn’t leave the programmer in me behind.
-            </p>
-
-            <p className="text-neutral-400 pt-3 md:text-sm text-sm max-w-full">
-              Faced with a product-packing nightmare — accessories everywhere,
-              no guide, and zero instructions — I coded my salvation in{" "}
-              <strong>C</strong>. That solution? A whopping 11,000 lines of code
-              running on a phone compiler, without a laptop. When life gives you
-              chaos, build a compiler app, right?
-            </p>
-
-            <p className="text-neutral-400 pt-3 md:text-sm text-sm max-w-full">
-              After that, I returned to Nepal, dove headfirst into studying and
-              programming, learned Android development, built projects in
-              Android Studio, explored web development, mastered React, and now
-              I’m venturing into backend with Spring Boot and PostgreSQL.
-              Supabase keeps me sane for quick projects. Currently, I’m in my
-              third semester of BCA, fully obsessed with full-stack web
-              applications.
-            </p>
-
-            <p className="text-neutral-400 pt-3 md:text-sm text-sm max-w-full">
-              TL;DR: From packing boxes in India to writing tens of thousands of
-              lines of code, self-taught and caffeine-powered, I’m here to build
-              systems that work, break, and then work better.
+           <p className="text-neutral-400 text-sm md:text-sm max-w-full">
+              I started my coding journey with C, learning everything on my own through
+              trial and error. From building simple logic programs to developing Android
+              apps and modern web applications with React, I’ve gradually expanded into
+              backend development using Spring Boot and PostgreSQL. I enjoy building,
+              breaking, and improving systems every day.
             </p>
 
             <section className="mt-10 w-full text-neutral-400 md:text-sm text-sm max-w-2xl">

@@ -38,7 +38,7 @@ function MusicPlayer() {
     >
       <button
         onClick={togglePlay}
-        className={`flex items-center justify-center w-15 h-2 rounded-full transition ${
+        className={`flex items-center justify-center w-15 h-1 rounded-full transition ${
           isPlaying ? "bg-green-500 hover:bg-green-600" : "bg-gray-500 hover:bg-gray-50"
         }`}
       >

@@ -38,9 +38,8 @@ function Navbar() {
 
   const navItems = [
     { title: 'Home', url: '/home' },
-    { title: 'MySelf', url: '/mySelf' },
     { title: 'Projects', url: '/projects' },
-    { title: 'Blog', url: '/blog' },
+    { title: 'MySelf', url: '/mySelf' },
   ];
 
   /* Scroll Effect */
