@@ -14,7 +14,7 @@ function MusicPlayer() {
         .then(() => setIsPlaying(true))
         .catch(() => {
           // Autoplay might be blocked by browser
-          setIsPlaying(true);
+          setIsPlaying(false);
         });
     }
   }, []);
@@ -32,8 +32,8 @@ function MusicPlayer() {
 
   return (
     <div
-      className={`flex items-center gap-3 rounded-full shadow-lg p-2 backdrop-blur-sm bg-black/30 ${
-        isDarkMode ? "bg-white/10" : "bg-black/30"
+      className={`flex h-2.5 items-center gap-3 rounded-full p-0 backdrop-blur-sm  ${
+        isDarkMode ? "bg-white/30" : "bg-black/20"
       }`}
     >
       <button
@@ -45,7 +45,7 @@ function MusicPlayer() {
         <img
           src="/icons/wave.png"
           alt="music icon"
-          className="w-10 h-10 object-cover"
+          className="w-10 h-4 object-cover"
         />
       </button>
 

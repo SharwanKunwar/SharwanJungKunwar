@@ -123,12 +123,11 @@ function Home() {
           <div className="">
             <h1
               className={`text-3xl md:text-4xl font-bold tracking-tight text-neutral-800 ${isDarkMode && "text-white"}`}
-            >
-              Sharwan Jung Kunwar
-            </h1>
-            <div className="h-[50px] flex justify-start items-center">
+            > Sharwan Jung Kunwar </h1>
+            
+            <div className="h-[30px] flex justify-start items-center">
               {/* MusicPlayer haptic on play/pause inside component */}
-              <MusicPlayer haptic={haptic} />
+            <MusicPlayer haptic={haptic} />  
             </div>
           </div>
 
@@ -287,16 +286,16 @@ function Home() {
           </div>
           <div className="text-center mt-5">
             <Link to="/projects">
-              <Button onClick={haptic.soft}>More Projects</Button>
+              <Button size="large" className="w-full! mb-10" onClick={haptic.soft}>More Projects</Button>
             </Link>
           </div>
         </div>
 
         {/* Skills Marquee -------------------------------------------------------*/}
-        <div className="relative w-full md:mt-15 mt-7 overflow-hidden ">
+        <div className="relative w-full md:mt-10 mt-5 overflow-hidden ">
           {/* Top Row – Left to Right */}
-          <div className="w-full h-20 overflow-hidden relative">
-            <div className="flex gap-6 animate-marquee-left hover:animation-play-state-paused">
+          <div className="w-full h-24 overflow-hidden relative pt-2">
+            <div className="flex gap-8 animate-marquee-left hover:animation-play-state-paused w-full ">
               {[...Array(2)].map((_, idx) =>
                 [
                   { icon: SiReact, name: "React", color: "text-blue-400" },
@@ -340,7 +339,7 @@ function Home() {
           </div>
 
           {/* Bottom Row – Right to Left */}
-          <div className="mt-5 w-full h-[80px] overflow-hidden relative">
+          <div className="mt-5 w-full h-25 overflow-hidden relative">
             <div className="flex gap-6 animate-marquee-right hover:animation-play-state-paused">
               {[...Array(2)].map((_, idx) =>
                 [
