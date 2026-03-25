@@ -4,6 +4,7 @@ import BookCard from "../components/BookCard";
 import { books } from "../data/books.js";
 import BlogPage from "../pages/BlogPage.jsx";
 import { blogs } from "../data/blogs";
+import MyLocationMap from "../components/MyLocationMap.jsx";
 
 export default function MySelf({ username = "SharwanKunwar" }) {
   const [profile, setProfile] = useState(null);
@@ -12,8 +13,6 @@ export default function MySelf({ username = "SharwanKunwar" }) {
     stars: 0,
     forks: 0,
   });
-
-  
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -125,22 +124,24 @@ export default function MySelf({ username = "SharwanKunwar" }) {
       <div className="bg-linear-to-br from-sky-200 to-pink-400 mb-5 rounded-md px-5 p-5">
         <div className="flex justify-between items-center mb-4">
           <h1 className="text-xl">My Blogs</h1>
-
         </div>
 
-        
-          <section className="flex flex-col gap-3">
-            {blogs.map((item) => (
-              <BlogPage
-                key={item.id}
-                img={item.img}
-                id={item.id}
-                title={item.title}
-                des={item.des}
-              />
-            ))}
-          </section>
-        
+        <section className="flex flex-col gap-3">
+          {blogs.map((item) => (
+            <BlogPage
+              key={item.id}
+              img={item.img}
+              id={item.id}
+              title={item.title}
+              des={item.des}
+            />
+          ))}
+        </section>
+      </div>
+
+      {/* // map div  */}
+      <div className="bg-red-400 mb-5 h-[500px]">
+        <MyLocationMap/>
       </div>
 
     </div>
