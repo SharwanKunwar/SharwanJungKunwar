@@ -139,9 +139,9 @@ export default function MySelf({ username = "SharwanKunwar" }) {
         </section>
       </div>
 
-      {/* // map div  */}
-      <div className="bg-red-400 mb-5 h-[500px]">
-        <MyLocationMap/>
+      {/* // map div  ----------------------------------*/}
+      <div className=" mb-5 ">
+        {/* <MyLocationMap/> */}
       </div>
 
     </div>

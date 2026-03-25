@@ -214,21 +214,19 @@ function Navbar() {
                         Home
                       </li>
                     </Link>
-                    <Link to="mySelf">
-                      <li className="backdrop-blur-2xl text-center px-30 py-2 rounded-sm border border-white/50 shadow-sm">
-                        MySelf
-                      </li>
-                    </Link>
+                    
                     <Link to="projects">
                       <li className="backdrop-blur-2xl text-center px-30 py-2 rounded-sm border border-white/50 shadow-sm">
                         Projects
                       </li>
                     </Link>
-                    <Link to="blog">
+
+                    <Link to="mySelf">
                       <li className="backdrop-blur-2xl text-center px-30 py-2 rounded-sm border border-white/50 shadow-sm">
-                        Blog
+                        MySelf
                       </li>
                     </Link>
+                    
                   </ul>
                 </nav>
               </div>

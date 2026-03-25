@@ -9,7 +9,7 @@ function BlogPage({ id, title, des }) {
     
       <div className="flex  h-full items-center w-full justify-between px-5 items-center">
         <h2 className="font-semibold text-lg">{title}</h2>
-        <p className="text-sm text-gray-700 mt-1">{des}</p>
+        <p className="text-sm text-gray-700 mt-1 md:block hidden">{des}</p>
 
         <button
           onClick={() => navigate(`/blog/${id}`)}
