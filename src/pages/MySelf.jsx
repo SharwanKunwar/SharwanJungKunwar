@@ -5,6 +5,9 @@ import { books } from "../data/books.js";
 import BlogPage from "../pages/BlogPage.jsx";
 import { blogs } from "../data/blogs";
 import MyLocationMap from "../components/MyLocationMap.jsx";
+import gallary01 from '../data/gallary01.js'
+import gallary02 from '../data/gallary02.js'
+import gallary03 from '../data/gallary03.js'
 
 export default function MySelf({ username = "SharwanKunwar" }) {
   const [profile, setProfile] = useState(null);
@@ -104,9 +107,8 @@ export default function MySelf({ username = "SharwanKunwar" }) {
       </div>
 
       {/* Books Section */}
-      <div className=" my-10 flex-wrap rounded-md p-3 text-black">
-        <h1 className="font-medium mb-3 text-xl">My Favorite Books</h1>
-
+      <h1 className="font-medium mb-3 mt-5 text-xl">My Favorite Books</h1>
+      <div className="mb-10 flex-wrap rounded-md  text-black">
         <div className="md:flex gap-3 flex-wrap">
           {books.map((item, index) => (
             <BookCard
@@ -121,11 +123,8 @@ export default function MySelf({ username = "SharwanKunwar" }) {
       </div>
 
       {/* Blogs */}
+      <div className="flex justify-between items-center mb-4"> <h1 className="text-xl font-medium underline">My Blogs</h1> </div>
       <div className="bg-linear-to-br from-sky-200 to-pink-400 mb-5 rounded-md px-5 p-5">
-        <div className="flex justify-between items-center mb-4">
-          <h1 className="text-xl">My Blogs</h1>
-        </div>
-
         <section className="flex flex-col gap-3">
           {blogs.map((item) => (
             <BlogPage
@@ -139,10 +138,33 @@ export default function MySelf({ username = "SharwanKunwar" }) {
         </section>
       </div>
 
-      {/* // map div  ----------------------------------*/}
-      <div className=" mb-5 ">
-        {/* <MyLocationMap/> */}
+      
+      <div className=" w-full h-[7%] mt-10 mb-5"><h1 className="text-xl font-medium underline">My Gallery</h1></div>
+      <div className=" backdrop-blur-sm  h-[700px] flex flex-col gap-3 rounded-md ">
+        
+        <div className=" w-full h-[95%] grid md:grid-cols-3 gap-5 overflow-y-scroll">
+            {/* img layout 01  */}
+            <div className=" ">
+              {gallary01.map((item, index)=>(
+                  <img src={item.path} alt={item.id} className="rounded-md mb-5 shadow-sm"/>
+              ))}
+            </div>
+            {/* img layout 02  */}
+            <div className="">
+              {gallary02.map((item, index)=>(
+                  <img src={item.path} alt={item.id} className="rounded-md mb-5 shadow-sm"/>
+              ))}
+            </div>
+            {/* img layout 03  */}
+            <div className="">
+              {gallary03.map((item, index)=>(
+                  <img src={item.path} alt={item.id} className="rounded-md mb-5 shadow-sm"/>
+              ))}
+            </div>
+
+        </div>
       </div>
+
 
     </div>
   );

@@ -3,7 +3,7 @@ import { DarkModeContext } from "../context/DarkModeContext";
 
 function MusicPlayer() {
   const audioRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const { isDarkMode } = useContext(DarkModeContext);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ function MusicPlayer() {
       audioRef.current.volume = 0.5; // Set 50% volume
       audioRef.current
         .play()
-        .then(() => setIsPlaying(true))
+        .then(() => setIsPlaying(false))
         .catch(() => {
           // Autoplay might be blocked by browser
           setIsPlaying(false);
@@ -49,7 +49,7 @@ function MusicPlayer() {
         />
       </button>
 
-      <audio ref={audioRef} autoPlay src="/audio/music01.mp3" loop />
+      <audio ref={audioRef}  src="/audio/music01.mp3" loop />
     </div>
   );
 }
