@@ -10,18 +10,18 @@ export const books = [
   },
   {
     id: 2,
-    title: "Eat That Frog",
-    imgPath: "books/book02.jpg",
+    title: "The Power Of Intentions",
+    imgPath: "books/ThePowerOfIntentions.jpg",
     description:
-      "A practical productivity guide that teaches you to stop procrastinating and tackle your most important tasks first. Focuses on discipline, time management, and getting things done efficiently.",
+      "A guide to harnessing the power of intention and visualization to manifest your desires and create the life you want. It explores the science behind the law of attraction and provides practical techniques for setting and achieving goals.  ",
     bookUrl: "",
   },
   {
     id: 3,
-    title: "Think and Grow Rich",
-    imgPath: "books/book03.jpg",
+    title: "Designing Data-Intensive Applications",
+    imgPath: "books/DesigningApplication.jpg",
     description:
-      "A classic personal development book that explores the mindset, habits, and beliefs needed to achieve success and financial growth. It emphasizes the power of thoughts, persistence, and clear goals.",
+      "A comprehensive guide to designing and building data-intensive applications. It covers the principles of database systems, distributed systems, and modern architecture patterns.",
     bookUrl: "",
   },
 ];
